@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        header {
+        background-color: #666;
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+        float: left;
+        width: 30%;
+        height: 300px; /* only for demonstration, should be removed */
+        background: #ccc;
+        padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+        list-style-type: none;
+        padding: 0;
+        }
+
+        article {
+        float: left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+        height: 300px; /* only for demonstration, should be removed */
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+        content: "";
+        display: table;
+        clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+        nav, article {
+            width: 100%;
+            height: auto;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Bienvenidos a mi sistema de marcas de televisores</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Acerca de">Acerca de</a></li>
+                <li><a href="#Televisores">Televisores</a></li>
+                <li><a href="#Imagenes">Imagenes</a></li>
+                <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+        </nav>
+  
+        <article>
+
+        <h1>Inicio</h1>
+                <P> ¡Bienvenido! 
+                Aquí podrás consultar, registrar y administrar 
+                de forma eficiente la información relacionada 
+                con las diferentes marcas de televisores 
+                disponibles en el mercado. Nuestro objetivo 
+                es ofrecerte una experiencia ágil, organizada 
+                y segura para que tengas siempre a mano los 
+                datos que necesitas. ¡Comencemos!</P>
+
+
+        <h1>Acerca de </h1>
+            <p>
+                Bienvenido a nuestro sitio web, tu fuente
+                 confiable para consultar información sobre 
+                 marcas de televisores. Aquí encontrarás 
+                 datos actualizados, comparativas y 
+                 características de las principales 
+                 marcas del mercado, para ayudarte a
+                  tomar decisiones informadas al momento 
+                  de elegir tu próximo televisor.
+                   Nuestro objetivo es ofrecerte un 
+                   espacio fácil de navegar, con contenido
+                    claro y útil, para que puedas 
+                    descubrir y conocer mejor las opciones
+                     disponibles según tus necesidades y
+                      preferencias. ¡Explora, compara y 
+                      encuentra la marca ideal para 
+                      ti!Bienvenido a nuestro sitio web, 
+                      tu fuente confiable para consultar 
+                      información sobre marcas de 
+                      televisores. Aquí encontrarás dat
+                      os actualizados, comparativas y 
+                      características de las principales 
+                      marcas del mercado, para ayudarte a t
+                      omar decisiones informadas al 
+                      momento de elegir tu próximo 
+                      televisor. Nuestro objetivo
+                       es ofrecerte un espacio fácil
+                        de navegar, con contenido claro
+                         y útil, para que puedas descubri
+                         r y conocer mejor las opciones 
+                         disponibles según tus necesidades 
+                         y preferencias. ¡Explora, compara
+                          y encuentra la marca ideal para 
+                          ti!
+            </p>
+            
+            <h2>Televisores</h2>
+                <p> Las marcas 
+                de televisores han 
+                evolucionado constantemente,
+                 ofreciendo tecnologías innovadoras
+                  y una amplia variedad de modelos 
+                  para todos los gustos y presupuestos.
+                   Entre las más populares destacan 
+                   Samsung, LG, Sony y TCL, reconocidas 
+                   por su calidad de imagen, durabilidad 
+                   y características avanzadas como 
+                   pantallas OLED, QLED y Smart TV. 
+                   Estas marcas lideran el mercado 
+                   gracias a su constante innovación 
+                   y buen rendimiento, convirtiéndose
+                    en las favoritas de los consumidores
+                     a nivel mundial.
+                </p>
+
+            <h3>Lista de las marcas mas conocidas</h3>
+                <ol>
+                    <li>Samsung</li>
+                    <li>LG</li>
+                    <li>Sony</li>
+                    <li>TCL</li>
+                    <li>Panasonic</li>
+
+                </ol>
+
+            <h4>Informacion extra y origen</h4>
+
+                <table border="1">
+                <tr>
+                    <th>Marca</th>
+                    <th>Pais de origen</th>
+                    <th>Tecnologia destacada</th>
+                    <th>Rango de Precio</th>
+                    <th>Año de Fundaciòn</th>
+                </tr>
+
+                <tr>
+                    <td>Samsung</td>
+                    <td>Corea del Sur</td>
+                    <td>QLED, Smart TV</td>
+                    <td>Medio-Alto</td>
+                    <td>1938</td>
+                </tr>
+
+                <tr>
+                    <td>LG</td>
+                    <td>Corea del Sur</td>
+                    <td>OLED, Smart TV</td>
+                    <td>Medio-Alto</td>
+                    <td>1958</td>
+                </tr>
+
+                <tr>
+                    <td>Sony</td>
+                    <td>Japón</td>
+                    <td>OLED, LCD, Smart TV</td>
+                    <td>Medio-Alto</td>
+                    <td>1946</td>
+                </tr>
+
+                <tr>
+                    <td>TCL</td>
+                    <td>China</td>
+                    <td>QLED, Smart TV</td>
+                    <td>Bajo-Medio</td>
+                    <td>1981</td>
+                </tr>
+
+                <tr>
+                    <td>Panasonic</td>
+                    <td>Japón</td>
+                    <td>OLED, LCD</td>
+                    <td>Medio</td>
+                    <td>1918</td>
+                </tr>
+                </table>
+
+        <h1>Imagenes</h1>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQsfY4J2MLaKC4pk0krwKAq3TwnWrzuXZxA&s" alt="Top 10 mejores marcas">
+                    
+            <h2>Contactos</h2>
+                <p> Kevin Anchatuña<br>
+                    Tel:0979323433<br>
+                <a href="maito:Ksancha@g.com">
+                    Ksancha@g.com</a><br>
+                
+                Gustavo Carrera<br>
+                Tel:0598745621<br>
+                <a href="maito:Gcarrera@g.com">
+                    Gcarrera@g.com</a>
+                </p>
+        
+        </article>    
+    </section>
+</body>
+</html>
