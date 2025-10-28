@@ -1,181 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TV World</title>
+    <link rel="icon" type="image/x-icon" href="imagen/favicon.ico">
 
     <style>
         * {
-        box-sizing: border-box;
+            box-sizing: border-box;
         }
 
         body {
-        font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: #f4f6fa;
+            color: #222;
         }
 
-        /* Style the header */
+        /* Encabezado */
         header {
-        background-color: #666;
-        padding: 30px;
-        text-align: center;
-        font-size: 35px;
-        color: white;
+            background: linear-gradient(90deg, #004aad, #0078ff);
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Create two columns/boxes that floats next to each other */
+        /* Menú de navegación */
         nav {
-        float: left;
-        width: 30%;
-        height: 300px; /* only for demonstration, should be removed */
-        background: #ccc;
-        padding: 20px;
+            float: left;
+            width: 25%;
+            background: #e3e9f3;
+            padding: 20px;
+            min-height: 100vh;
+            border-right: 2px solid #cbd4e2;
         }
 
-        /* Style the list inside the menu */
         nav ul {
-        list-style-type: none;
-        padding: 0;
+            list-style-type: none;
+            padding: 0;
         }
 
+        nav ul li {
+            margin: 12px 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #004aad;
+            font-weight: bold;
+            display: block;
+            padding: 8px 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #004aad;
+            color: white;
+        }
+
+        /* Contenido principal */
         article {
-        float: left;
-        padding: 20px;
-        width: 70%;
-        background-color: #f1f1f1;
-        height: 300px; /* only for demonstration, should be removed */
+            float: left;
+            padding: 30px;
+            width: 75%;
+            background-color: #ffffff;
         }
 
-        /* Clear floats after the columns */
         section::after {
-        content: "";
-        display: table;
-        clear: both;
+            content: "";
+            display: table;
+            clear: both;
         }
 
-        /* Style the footer */
-        footer {
-        background-color: #777;
-        padding: 10px;
-        text-align: center;
-        color: white;
+        /* Encabezados */
+        h1, h2, h3 {
+            color: #6aabe9;
         }
 
-        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-        @media (max-width: 600px) {
-        nav, article {
+        /* Tablas */
+        table {
             width: 100%;
-            height: auto;
+            border-collapse: collapse;
+            text-align: center;
+            margin-top: 15px;
         }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        table th {
+            background-color: #004aad;
+            color: white;
+        }
+
+        /* Formulario */
+        form {
+            background-color: #f9fbff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0 12px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #004aad;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0078ff;
+        }
+
+        /* Imágenes y video */
+        img, iframe {
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        /* Pie de página */
+        footer {
+            clear: both;
+            background-color: #004aad;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            font-size: 15px;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+        }
+
+        footer a {
+            color: #a9d1ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Diseño responsivo */
+        @media (max-width: 768px) {
+            nav, article {
+                width: 100%;
+                float: none;
+                min-height: auto;
+            }
+
+            nav {
+                border-right: none;
+                border-bottom: 2px solid #cbd4e2;
+            }
+
+            header {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h2>Bienvenidos a mi sistema de marcas de televisores</h2>
+        <h2>Bienvenidos a TV World</h2>
     </header>
 
-    <section>
-        <nav>
-            <ul>
-                <li><a href="#Inicio">Inicio</a></li>
-                <li><a href="#Acerca de">Acerca de</a></li>
-                <li><a href="#Televisores">Televisores</a></li>
-                <li><a href="#Imagenes">Imagenes</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de">Acerca de</a></li>
+            <li><a href="#televisores">Televisores</a></li>
+            <li><a href="#imagenes">Imágenes</a></li>
+            <li><a href="#contactos">Contacto</a></li>
+        </ul>
+    </nav>
   
-        <article>
-
-        <h1>Inicio</h1>
-                <P> ¡Bienvenido! 
-                Aquí podrás consultar, registrar y administrar 
-                de forma eficiente la información relacionada 
-                con las diferentes marcas de televisores 
-                disponibles en el mercado. Nuestro objetivo 
-                es ofrecerte una experiencia ágil, organizada 
-                y segura para que tengas siempre a mano los 
-                datos que necesitas. ¡Comencemos!</P>
-
-
-        <h1>Acerca de </h1>
+    <article>  
+        <section id="inicio">        
+            <h1>Inicio</h1>
             <p>
-                Bienvenido a nuestro sitio web, tu fuente
-                 confiable para consultar información sobre 
-                 marcas de televisores. Aquí encontrarás 
-                 datos actualizados, comparativas y 
-                 características de las principales 
-                 marcas del mercado, para ayudarte a
-                  tomar decisiones informadas al momento 
-                  de elegir tu próximo televisor.
-                   Nuestro objetivo es ofrecerte un 
-                   espacio fácil de navegar, con contenido
-                    claro y útil, para que puedas 
-                    descubrir y conocer mejor las opciones
-                     disponibles según tus necesidades y
-                      preferencias. ¡Explora, compara y 
-                      encuentra la marca ideal para 
-                      ti!Bienvenido a nuestro sitio web, 
-                      tu fuente confiable para consultar 
-                      información sobre marcas de 
-                      televisores. Aquí encontrarás dat
-                      os actualizados, comparativas y 
-                      características de las principales 
-                      marcas del mercado, para ayudarte a t
-                      omar decisiones informadas al 
-                      momento de elegir tu próximo 
-                      televisor. Nuestro objetivo
-                       es ofrecerte un espacio fácil
-                        de navegar, con contenido claro
-                         y útil, para que puedas descubri
-                         r y conocer mejor las opciones 
-                         disponibles según tus necesidades 
-                         y preferencias. ¡Explora, compara
-                          y encuentra la marca ideal para 
-                          ti!
+                En TV World te ofrecemos las últimas tendencias 
+                en televisores inteligentes, diseñados para brindar 
+                una experiencia visual única. Encuentra pantallas con 
+                la mejor resolución, colores vibrantes y conectividad 
+                total para tu entretenimiento.
             </p>
-            
+        </section>
+
+        <section id="acerca-de">
+            <h1>Acerca de nuestras marcas</h1>
+            <p>
+                Trabajamos con las marcas más reconocidas del mercado: Samsung, LG, Sony, TCL
+                 y muchas más. Cada una ofrece innovación, calidad y estilo en cada modelo. 
+                 Descubre qué marca se adapta mejor a tus necesidades.
+            </p>
+            <p>
+                Nuestro objetivo es ofrecerte un espacio fácil de navegar, con 
+                contenido claro y útil, para que puedas descubrir y conocer mejor 
+                las opciones disponibles según tus necesidades y preferencias. 
+                ¡Explora, compara y encuentra la marca ideal para ti!
+            </p>
+        </section>
+
+        <section id="televisores">
             <h2>Televisores</h2>
-                <p> Las marcas 
-                de televisores han 
-                evolucionado constantemente,
-                 ofreciendo tecnologías innovadoras
-                  y una amplia variedad de modelos 
-                  para todos los gustos y presupuestos.
-                   Entre las más populares destacan 
-                   Samsung, LG, Sony y TCL, reconocidas 
-                   por su calidad de imagen, durabilidad 
-                   y características avanzadas como 
-                   pantallas OLED, QLED y Smart TV. 
-                   Estas marcas lideran el mercado 
-                   gracias a su constante innovación 
-                   y buen rendimiento, convirtiéndose
-                    en las favoritas de los consumidores
-                     a nivel mundial.
-                </p>
+            <p>
+                Explora nuestra colección de televisores 4K UHD, OLED y QLED, con tamaños 
+                desde 32 hasta 85 pulgadas. Disfruta de funciones como control por voz, 
+                integración con asistentes inteligentes y sonido envolvente de última generación.
+            </p>
 
-            <h3>Lista de las marcas mas conocidas</h3>
-                <ol>
-                    <li>Samsung</li>
-                    <li>LG</li>
-                    <li>Sony</li>
-                    <li>TCL</li>
-                    <li>Panasonic</li>
+            <h3>Top 5 Marcas de Televisores</h3>
+            <p>Las siguientes son las cinco marcas de televisores más destacadas en el mercado actual:</p>
+            <ol>
+                <li>Samsung</li>
+                <li>LG</li>
+                <li>Sony</li>
+                <li>TCL</li>
+                <li>Panasonic</li>
+            </ol>
 
-                </ol>
-
-            <h4>Informacion extra y origen</h4>
-
-                <table border="1">
+            <h3>Comparativa de Marcas de Televisores</h3>
+            <p>A continuación, se presenta una tabla comparativa con información relevante sobre 
+                las principales marcas de televisores:</p>
+            <table>
                 <tr>
                     <th>Marca</th>
-                    <th>Pais de origen</th>
-                    <th>Tecnologia destacada</th>
+                    <th>País de origen</th>
+                    <th>Tecnología destacada</th>
                     <th>Rango de Precio</th>
-                    <th>Año de Fundaciòn</th>
-                </tr>
-
+                    <th>Año de Fundación</th>
                 <tr>
                     <td>Samsung</td>
                     <td>Corea del Sur</td>
@@ -217,68 +293,52 @@
                 </tr>
                 </table>
 
-        <h1>Imagenes</h1>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQsfY4J2MLaKC4pk0krwKAq3TwnWrzuXZxA&s" alt="Top 10 mejores marcas">
-            <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-            </iframe>      
+        </section>
 
-        <h2>Contactos</h2>
-            <p> Kevin Anchatuña<br>
-                Tel:0979323433<br>
-                <a href="maito:Ksancha@g.com">
-                Ksancha@g.com</a><br>
-                
-                Gustavo Carrera<br>
-                Tel:0598745621<br>
-                <a href="maito:Gcarrera@g.com">
-                Gcarrera@g.com</a>
-            </p>
+        <section id="imagenes">
+            <h2>Imágenes y Video promocional</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShQsfY4J2MLaKC4pk0krwKAq3TwnWrzuXZxA&s" alt="Top 10 mejores marcas de televisores" width="420">
+            <br><br>
+            <iframe width="420" height="345" src="https://www.youtube.com/embed/AxruvakRyRE" title="Video sobre marcas de televisores" allowfullscreen></iframe>      
         
-         
+            <div class="Teles">
+                <form>
+                    <h2>Danos tu opinión sobre Marcas de Televisores</h2>
 
-        <form>
-            <h2><p>Danos tu opinión sobre Marcas de Televisores</p></h2>
+                    <label for="lname">Apellidos:</label><br>
+                    <input type="text" id="lname" name="lname"><br>
 
-            <label for="fname">Apellidos:</label><br>
-            <input type="text" id="fname" name="fname" value=""><br>
-            <label for="lname">Nombres:</label><br>
-            <input type="text" id="lname" name="lname" value="">
+                    <label for="fname">Nombres:</label><br>
+                    <input type="text" id="fname" name="fname"><br>
 
-            <p>¿Cuál es tu marca de televisor favorita?</p>
-            <input type="radio" id="Samsung" name="marca" value="Samsung">
-            <label for="Samsung">Samsung</label><br>
+                    <p><strong>¿Cuál es tu marca de televisor favorita?</strong></p>
+                    <input type="radio" id="Samsung" name="marca" value="Samsung"><label for="Samsung"> Samsung</label><br>
+                    <input type="radio" id="LG" name="marca" value="LG"><label for="LG"> LG</label><br>
+                    <input type="radio" id="TCL" name="marca" value="TCL"><label for="TCL"> TCL</label><br>
+                    <input type="radio" id="Panasonic" name="marca" value="Panasonic"><label for="Panasonic"> Panasonic</label><br>
 
-            <input type="radio" id="LG" name="marca" value="LG">
-            <label for="LG">LG</label><br>
+                    <p><strong>¿Qué características buscas en un televisor?</strong></p>
+                    <input type="checkbox" id="4k" name="caracteristicas" value="Resolución 4K"><label for="4k"> Resolución 4K</label><br>
+                    <input type="checkbox" id="smart" name="caracteristicas" value="Smart TV"><label for="smart"> Smart TV</label><br>
+                    <input type="checkbox" id="oled" name="caracteristicas" value="Pantalla OLED"><label for="oled"> Pantalla OLED</label><br>
+                    <input type="checkbox" id="sonido" name="caracteristicas" value="Sonido envolvente"><label for="sonido"> Sonido envolvente</label><br><br>
 
-            <input type="radio" id="TCL" name="marca" value="TCL">
-            <label for="TCL">TCL</label><br>
-
-            <input type="radio" id="Panasonic" name="marca" value="Panasonic">
-            <label for="Panasonic">Panasonic</label><br>
-
-            <p>¿Què caracteristicas buscas en un televisor?</p>
-            
-            <input type="checkbox" id="4k" name="caracteristicas" value="Resolución 4K">
-            <label for="4k">Resolución 4K</label><br>
-
-            <input type="checkbox" id="smart" name="caracteristicas" value="Smart TV">
-            <label for="smart">Smart TV</label><br>
-
-            <input type="checkbox" id="oled" name="caracteristicas" value="Pantalla OLED">
-            <label for="oled">Pantalla OLED</label><br>
-
-            <input type="checkbox" id="sonido" name="caracteristicas" value="Sonido envolvente">
-            <label for="sonido">Sonido envolvente</label><br><br>
-
-            <input type="submit" value="Enviar Opinión">
-
-        </form>
-        </article> 
-  
-    </section>
-
-
+                    <input type="submit" value="Enviar Opinión">
+                </form>
+            </div>
+        </section>
+    </article>
+    
+    <footer>
+        <section id="contactos">
+            <h2>Contactos</h2>
+            <p>
+                Kevin Anchatuña<br>
+                Tel: 0979322433<br>
+                <a href="mailto:Ksancha@g.com">Ksanchatuna@espe.edu.ec</a><br>
+                Derechos reservados © 2024
+            </p>
+        </section>
+    </footer>
 </body>
-
 </html>
