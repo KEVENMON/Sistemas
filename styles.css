@@ -1,0 +1,173 @@
+/* Reset de estilos */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f6fa;
+    color: #222;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #004aad, #0078ff);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Menú de navegación */
+nav {
+    float: left;
+    width: 25%;
+    background: #e3e9f3;
+    padding: 20px;
+    min-height: 100vh;
+    border-right: 2px solid #cbd4e2;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 12px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #004aad;
+    font-weight: bold;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #004aad;
+    color: white;
+}
+
+/* Contenido principal */
+article {
+    float: left;
+    padding: 30px;
+    width: 75%;
+    background-color: #ffffff;
+}
+
+section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Encabezados */
+h1, h2, h3 {
+    color: #6aabe9;
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #004aad;
+    color: white;
+}
+
+/* Formulario */
+form {
+    background-color: #f9fbff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0078ff;
+}
+
+/* Imágenes y video */
+img, iframe {
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Pie de página */
+footer {
+    clear: both;
+    background-color: #004aad;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+}
+
+footer a {
+    color: #a9d1ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    nav, article {
+        width: 100%;
+        float: none;
+        min-height: auto;
+    }
+
+    nav {
+        border-right: none;
+        border-bottom: 2px solid #cbd4e2;
+    }
+
+    header {
+        font-size: 28px;
+    }
+}
